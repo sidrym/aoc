@@ -1,7 +1,6 @@
 #lang python
 file = 'input.txt'
 
-import collections
 f = [i.strip() for i in open(file).readlines()]
 
 def check_line(l):
@@ -15,6 +14,8 @@ for line in f:
 
 	if check_line(l):
 		silver += 1
+		gold += 1
+		continue
 
 	for remove_index in range(len(l)):
 		l2 = l.copy()
